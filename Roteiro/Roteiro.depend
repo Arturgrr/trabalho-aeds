@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1743010473 source:c:\users\user\documents\codeblocks\roteiro\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+
