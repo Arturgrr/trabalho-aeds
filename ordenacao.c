@@ -113,17 +113,14 @@ void merge(Evento* eventos, int l, int m, int r) {
     int n1 = m - l + 1;
     int n2 = r - m;
     
-    // Criar arrays temporários
     Evento* L = (Evento*)malloc(n1 * sizeof(Evento));
     Evento* R = (Evento*)malloc(n2 * sizeof(Evento));
     
-    // Copiar dados para os arrays temporários
     for (int i = 0; i < n1; i++)
         L[i] = eventos[l + i];
     for (int j = 0; j < n2; j++)
         R[j] = eventos[m + 1 + j];
     
-    // Merge dos arrays temporários de volta para eventos
     int i = 0, j = 0, k = l;
     while (i < n1 && j < n2) {
         if (L[i].avaliacao >= R[j].avaliacao) {
@@ -136,14 +133,12 @@ void merge(Evento* eventos, int l, int m, int r) {
         k++;
     }
     
-    // Copiar elementos restantes de L[]
     while (i < n1) {
         eventos[k] = L[i];
         i++;
         k++;
     }
     
-    // Copiar elementos restantes de R[]
     while (j < n2) {
         eventos[k] = R[j];
         j++;
