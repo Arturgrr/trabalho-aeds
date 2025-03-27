@@ -308,8 +308,6 @@ int main() {
         inserirCidade(&raiz, novaCidade);
     }
     
-    // TODO: Perguntar se o usuário deseja utilizar a Interface Gráfica
-
     do {
         printf("\n===========================================\n");
         printf("    Roteiro Turistico Inteligente\n");
